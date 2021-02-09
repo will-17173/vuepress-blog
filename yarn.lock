@@ -1100,7 +1100,7 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-last-updated@1.8.0":
+"@vuepress/plugin-last-updated@1.8.0", "@vuepress/plugin-last-updated@^1.2.0":
   version "1.8.0"
   resolved "https://registry.npm.taobao.org/@vuepress/plugin-last-updated/download/@vuepress/plugin-last-updated-1.8.0.tgz?cache=0&sync_timestamp=1609811150581&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vuepress%2Fplugin-last-updated%2Fdownload%2F%40vuepress%2Fplugin-last-updated-1.8.0.tgz#a0fcd2906a4dcae107634013f7c49ddd05e0de87"
   integrity sha1-oPzSkGpNyuEHY0AT98Sd3QXg3oc=
@@ -5948,7 +5948,7 @@ pretty-time@^1.1.0:
   resolved "https://registry.npm.taobao.org/pretty-time/download/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
   integrity sha1-/7dCmvq7hTXDRqNOQYc63z103Q4=
 
-prismjs@^1.13.0:
+prismjs@^1.13.0, prismjs@^1.19.0:
   version "1.23.0"
   resolved "https://registry.npm.taobao.org/prismjs/download/prismjs-1.23.0.tgz?cache=0&sync_timestamp=1609438547304&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fprismjs%2Fdownload%2Fprismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
   integrity sha1-07OWf31yRAaQSXZSqdQP8EYGfzM=
@@ -7081,6 +7081,11 @@ thunky@^1.0.2:
   resolved "https://registry.npm.taobao.org/thunky/download/thunky-1.1.0.tgz#5abaf714a9405db0504732bbccd2cedd9ef9537d"
   integrity sha1-Wrr3FKlAXbBQRzK7zNLO3Z75U30=
 
+timeago.js@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npm.taobao.org/timeago.js/download/timeago.js-4.0.2.tgz#724e8c8833e3490676c7bb0a75f5daf20e558028"
+  integrity sha1-ck6MiDPjSQZ2x7sKdfXa8g5VgCg=
+
 timers-browserify@^2.0.4:
   version "2.0.12"
   resolved "https://registry.npm.taobao.org/timers-browserify/download/timers-browserify-2.0.12.tgz?cache=0&sync_timestamp=1603793732246&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftimers-browserify%2Fdownload%2Ftimers-browserify-2.0.12.tgz#44a45c11fbf407f34f97bccd1577c652361b00ee"
@@ -7567,6 +7572,15 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   integrity sha1-bv8tTBhsypF8yfffKwr33nyMZDg=
   dependencies:
     smoothscroll-polyfill "^0.4.3"
+
+vuepress-theme-simple@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npm.taobao.org/vuepress-theme-simple/download/vuepress-theme-simple-1.2.2.tgz#4051536e1d23f226c7f059171d1f9823e5ab41fc"
+  integrity sha1-QFFTbh0j8ibH8FkXHR+YI+WrQfw=
+  dependencies:
+    "@vuepress/plugin-last-updated" "^1.2.0"
+    prismjs "^1.19.0"
+    timeago.js "^4.0.2"
 
 vuepress@^1.8.0:
   version "1.8.0"
