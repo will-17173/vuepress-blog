@@ -8,4 +8,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
+git push -f git@github.com:will-17173/will-17173.github.io.git master
+
 cd -
