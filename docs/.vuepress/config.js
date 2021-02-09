@@ -5,9 +5,6 @@ module.exports = {
   base: '/vuepress-blog/',
   evergreen: true,
   themeConfig: {
-    author: 'Will.H',
-    navbar: {
-      什么都没有: 'https://will-17173.github.io/vuepress-blog/'
-    }
+    author: 'Will.H'
   }
 }
