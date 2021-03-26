@@ -4,3 +4,5 @@
 git reset --hard commit-hash
 git push -u origin master -f
 ```
+
+
