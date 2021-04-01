@@ -6,5 +6,13 @@ module.exports = {
   evergreen: true,
   themeConfig: {
     author: 'Will.H'
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        ga: 'UA-17647166-1'
+      }
+    ]
+  ]
 }
