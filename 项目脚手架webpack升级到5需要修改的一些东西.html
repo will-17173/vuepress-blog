@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目脚手架 webpack 升级到 5 需要修改的一些东西 | Nothing Here</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="什么都没有">
+    
+    <link rel="preload" href="/vuepress-blog/assets/css/1.styles.709f6203.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.129d440e.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/3.d7b46cbf.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/15.ae1afdbd.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.41d38a4e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.f350da4f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.8089e1a4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.43da0329.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.4a717c12.js"><link rel="prefetch" href="/vuepress-blog/assets/js/2.21ebc214.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.1099819e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.1bfec37d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.dc5e901a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.2dd73b7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.750656c5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.82dea618.js">
+    <link rel="stylesheet" href="/vuepress-blog/assets/css/1.styles.709f6203.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container vuepress-theme-simple"><header class="header"><a href="/vuepress-blog/" title="什么都没有" class="site-name router-link-active">
+      Nothing Here
+    </a> <div style="clear: both"></div> <!----></header> <section class="post-view"><div class="post-head"><h1 class="post-title">
+      项目脚手架 webpack 升级到 5 需要修改的一些东西
+    </h1> <time datetime="4/6/2021, 12:54:25 PM" title="4/6/2021, 12:54:25 PM" pubdate="pubdate" class="post-date">
+  1 minute ago
+</time></div> <div class="content__default"><h1 id="项目脚手架-webpack-升级到-5-需要修改的一些东西"><a href="#项目脚手架-webpack-升级到-5-需要修改的一些东西" class="header-anchor">#</a> 项目脚手架 webpack 升级到 5 需要修改的一些东西</h1> <p>今天把公司项目脚手架的 webpack 升级到 5，大体上还是比较顺利的，有几个需要注意的地方：</p> <ol><li>默认打包的 JS 文件里有箭头函数，这个在 output 里改</li></ol> <div class="language- extra-class"><pre class="language-text"><code>output: {
+  environment: {
+    arrowFunction: false
+  }
+},
+</code></pre></div><ol start="2"><li><code>postcss-loader</code>的<code>plugins</code>选项改到<code>postcssOptions</code>里</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// 原来
+{
+  loader: 'postcss-loader',
+  options: {
+    plugins: [
+      require('postcss-preset-env')(),
+      require('postcss-pxtorem')({
+        rootValue: 100,
+        propWhiteList: [],
+        exclude: file =&gt; {
+          return file.indexOf('pc') &gt; -1
+        }
+      })
+    ]
+  }
+},
+
+// 新
+{
+  loader: 'postcss-loader',
+  options: {
+    postcssOptions: {
+      plugins: [
+        require('postcss-preset-env')(),
+        require('postcss-pxtorem')({
+          rootValue: 100,
+          propWhiteList: [],
+          exclude: file =&gt; {
+            return file.indexOf('pc') &gt; -1
+          }
+        })
+      ]
+    }
+  }
+},
+</code></pre></div><ol start="3"><li><code>sass-loader</code>的<code>prependData</code>改成了<code>additionalData</code>， 另外参数有变化，且需要 return 原 content</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// 原来
+prependData: (loaderContext) =&gt; {
+  const { resourcePath } = loaderContext
+  if (resourcePath.includes('/pages/') || resourcePath.includes('\\pages\\')) {
+    return `
+      @import &quot;./src/assets/scss/_mixin.scss&quot;;
+      @import &quot;./src/assets/scss/gb.scss&quot;;
+    `
+  }
+}
+
+
+// 新
+additionalData: (content, loaderContext) =&gt; {
+  const { resourcePath } = loaderContext
+  if (resourcePath.includes('/pages/') || resourcePath.includes('\\pages\\')) {
+    return `
+      @import &quot;./src/assets/scss/_mixin.scss&quot;;
+      @import &quot;./src/assets/scss/gb.scss&quot;;
+      ${content}
+    `
+  }
+  return content
+}
+</code></pre></div><ol start="4"><li><code>webpack-merge</code>不再默认导出<code>merge</code></li></ol> <div class="language- extra-class"><pre class="language-text"><code>// 原来
+const merge = require('webpack-merge')
+
+// 新
+const { merge } = require('webpack-merge')
+</code></pre></div><ol start="5"><li>devServer 需要 4.0beta 版本，变得比较多, <a href="https://github.com/webpack/webpack-dev-server/releases" target="_blank" rel="noopener noreferrer">https://github.com/webpack/webpack-dev-server/releases<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ol> <div class="language- extra-class"><pre class="language-text"><code>devServer: {
+  static: [consts.DIST_ROOT, 'public'], // contentBase =&gt; static
+  host: '0.0.0.0',
+  port: consts.DEV_PORT,
+  hot: true,
+  firewall: false, // 原disableHostCheck =&gt; firewall里
+  dev: {
+    writeToDisk: true // 原writeToDisk 集成到dev选项里
+  }
+}
+</code></pre></div></div></section> <footer class="footer">
+  © 2021
+  <i class="icon-user"></i>
+  Will.H
+  <br>
+  Powered by
+  <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">VuePress</a>
+  | Theme
+  <a href="https://github.com/viko16/vuepress-theme-simple" rel="noopener" target="_blank">Simple</a></footer></div><div class="global-ui"></div></div>
+    <script src="/vuepress-blog/assets/js/app.129d440e.js" defer></script><script src="/vuepress-blog/assets/js/3.d7b46cbf.js" defer></script><script src="/vuepress-blog/assets/js/15.ae1afdbd.js" defer></script>
+  </body>
+</html>
