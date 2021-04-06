@@ -8,7 +8,7 @@
     
     <meta name="description" content="什么都没有">
     
-    <link rel="preload" href="/vuepress-blog/assets/css/1.styles.709f6203.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.98b3ccaa.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/3.d7b46cbf.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/15.4b20d7dc.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.41d38a4e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.f350da4f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.8089e1a4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.43da0329.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.4a717c12.js"><link rel="prefetch" href="/vuepress-blog/assets/js/2.21ebc214.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.1099819e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.1bfec37d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.dc5e901a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.2dd73b7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.750656c5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.82dea618.js">
+    <link rel="preload" href="/vuepress-blog/assets/css/1.styles.709f6203.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.5417ec9a.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/3.d7b46cbf.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/15.5f2cda3b.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.41d38a4e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.f350da4f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.8089e1a4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.43da0329.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.4a717c12.js"><link rel="prefetch" href="/vuepress-blog/assets/js/2.21ebc214.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.1099819e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.1bfec37d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.dc5e901a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.2dd73b7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.750656c5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.82dea618.js">
     <link rel="stylesheet" href="/vuepress-blog/assets/css/1.styles.709f6203.css">
   </head>
   <body>
@@ -16,9 +16,9 @@
       Nothing Here
     </a> <div style="clear: both"></div> <!----></header> <section class="post-view"><div class="post-head"><h1 class="post-title">
       项目脚手架 webpack 升级到 5 需要修改的一些东西
-    </h1> <time datetime="4/6/2021, 12:59:56 PM" title="4/6/2021, 12:59:56 PM" pubdate="pubdate" class="post-date">
+    </h1> <time datetime="4/6/2021, 1:02:47 PM" title="4/6/2021, 1:02:47 PM" pubdate="pubdate" class="post-date">
   1 minute ago
-</time></div> <div class="content__default"><h1 id="项目脚手架-webpack-升级到-5-需要修改的一些东西"><a href="#项目脚手架-webpack-升级到-5-需要修改的一些东西" class="header-anchor">#</a> 项目脚手架 webpack 升级到 5 需要修改的一些东西</h1> <p>今天把公司项目脚手架的 webpack 升级到 5, 操作步骤如下：</p> <ol><li>升级<code>webpack</code>, <code>webpack-cli</code>, <code>webpack-dev-server</code></li></ol> <div class="language- extra-class"><pre class="language-text"><code>yarn add webpack webpack-cli webpack-dev-server@4
+</time></div> <div class="content__default"><h1 id="项目脚手架-webpack-升级到-5-需要修改的一些东西"><a href="#项目脚手架-webpack-升级到-5-需要修改的一些东西" class="header-anchor">#</a> 项目脚手架 webpack 升级到 5 需要修改的一些东西</h1> <p>今天把公司项目脚手架的 webpack 升级到 5, 操作步骤如下：</p> <ol><li>升级<code>webpack</code>, <code>webpack-cli</code>, <code>webpack-dev-server</code></li></ol> <div class="language- extra-class"><pre class="language-text"><code>yarn add webpack webpack-cli webpack-dev-server@4 -D
 </code></pre></div><ol start="2"><li>升级其它依赖包</li></ol> <div class="language- extra-class"><pre class="language-text"><code>yarn upgrade-interactive --latest
 </code></pre></div><p>之后选择需要升级的包，我这里基本上全部勾上了.</p> <p>大体上还是比较顺利的，有几个需要注意的地方：</p> <ol><li>默认打包的 JS 文件里有箭头函数，这个在 output 里改</li></ol> <div class="language- extra-class"><pre class="language-text"><code>output: {
   environment: {
@@ -108,6 +108,6 @@ const { merge } = require('webpack-merge')
   <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">VuePress</a>
   | Theme
   <a href="https://github.com/viko16/vuepress-theme-simple" rel="noopener" target="_blank">Simple</a></footer></div><div class="global-ui"></div></div>
-    <script src="/vuepress-blog/assets/js/app.98b3ccaa.js" defer></script><script src="/vuepress-blog/assets/js/3.d7b46cbf.js" defer></script><script src="/vuepress-blog/assets/js/15.4b20d7dc.js" defer></script>
+    <script src="/vuepress-blog/assets/js/app.5417ec9a.js" defer></script><script src="/vuepress-blog/assets/js/3.d7b46cbf.js" defer></script><script src="/vuepress-blog/assets/js/15.5f2cda3b.js" defer></script>
   </body>
 </html>
