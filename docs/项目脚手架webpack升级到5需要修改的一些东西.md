@@ -1,6 +1,22 @@
 # 项目脚手架 webpack 升级到 5 需要修改的一些东西
 
-今天把公司项目脚手架的 webpack 升级到 5，大体上还是比较顺利的，有几个需要注意的地方：
+今天把公司项目脚手架的 webpack 升级到 5, 操作步骤如下：
+
+1. 升级`webpack`, `webpack-cli`, `webpack-dev-server`
+
+```
+yarn add webpack webpack-cli webpack-dev-server@4
+```
+
+2. 升级其它依赖包
+
+```
+yarn upgrade-interactive --latest
+```
+
+之后选择需要升级的包，我这里基本上全部勾上了.
+
+大体上还是比较顺利的，有几个需要注意的地方：
 
 1. 默认打包的 JS 文件里有箭头函数，这个在 output 里改
 
@@ -91,7 +107,7 @@ const merge = require('webpack-merge')
 const { merge } = require('webpack-merge')
 ```
 
-5. devServer 需要 4.0beta 版本，变得比较多, [https://github.com/webpack/webpack-dev-server/releases](https://github.com/webpack/webpack-dev-server/releases)
+5. devServer 需要 4.0beta 版本，变得比较多, 这里可以先看一下 changelog, [https://github.com/webpack/webpack-dev-server/releases](https://github.com/webpack/webpack-dev-server/releases)
 
 ```
 devServer: {
