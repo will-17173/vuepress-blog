@@ -5,7 +5,7 @@
 1. 升级`webpack`, `webpack-cli`, `webpack-dev-server`
 
 ```
-yarn add webpack webpack-cli webpack-dev-server@4
+yarn add webpack webpack-cli webpack-dev-server@4 -D
 ```
 
 2. 升级其它依赖包
