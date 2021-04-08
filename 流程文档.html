@@ -8,7 +8,7 @@
     
     <meta name="description" content="什么都没有">
     
-    <link rel="preload" href="/vuepress-blog/assets/css/1.styles.709f6203.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.7a953d33.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/3.d7b46cbf.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/16.7ff0e1f3.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.ec2cdb3b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.b51e2596.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.812ca7e8.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.e25cac9c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.7a9d0fb7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.8d405573.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.19a3e7ad.js"><link rel="prefetch" href="/vuepress-blog/assets/js/2.21ebc214.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.1099819e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.1bfec37d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.dc5e901a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.2dd73b7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.750656c5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.7e14d47c.js">
+    <link rel="preload" href="/vuepress-blog/assets/css/1.styles.709f6203.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.fb0d49e7.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/3.d7b46cbf.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/16.0aa4aad9.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.ec2cdb3b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.b51e2596.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.812ca7e8.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.e25cac9c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.7a9d0fb7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.8d405573.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.19a3e7ad.js"><link rel="prefetch" href="/vuepress-blog/assets/js/2.21ebc214.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.1099819e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.1bfec37d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.dc5e901a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.2dd73b7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.750656c5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.7e14d47c.js">
     <link rel="stylesheet" href="/vuepress-blog/assets/css/1.styles.709f6203.css">
   </head>
   <body>
@@ -16,7 +16,7 @@
       Nothing Here
     </a> <div style="clear: both"></div> <!----></header> <section class="post-view"><div class="post-head"><h1 class="post-title">
       前后端配合工作流说明
-    </h1> <time datetime="4/7/2021, 12:14:04 PM" title="4/7/2021, 12:14:04 PM" pubdate="pubdate" class="post-date">
+    </h1> <time datetime="4/8/2021, 7:08:49 AM" title="4/8/2021, 7:08:49 AM" pubdate="pubdate" class="post-date">
   1 minute ago
 </time></div> <div class="content__default"><h1 id="前后端配合工作流说明"><a href="#前后端配合工作流说明" class="header-anchor">#</a> 前后端配合工作流说明</h1> <h2 id="流程介绍"><a href="#流程介绍" class="header-anchor">#</a> 流程介绍</h2> <p>在新的工作流中，分为前后端不分离模式和前后端分离模式。</p> <ul><li>不分离模式：前端人员在<strong>项目仓库中</strong>开发活动，开发完成后告知后端人员开发目录路径，后端人员打包生成模板文件，之后在模板页面开发，直至开发完成部署上线;</li> <li>分离模式：前端人员在<strong>项目仓库中</strong>开发活动，后端提供接口给前端使用，开发完成后进行联调，直至完成开发部署上线。此开发流程中后端人员不需要关注模板文件;</li></ul> <p>与旧工作流程相比，新流程主要有以下几点不同：</p> <ol><li>前端工程源码存放于项目仓库;</li> <li>静态资源由发布系统编译并发布;</li> <li>交付给后端的模板由后端人员编译得到;</li> <li>后端人员在本地开发时静态资源读取的是本地文件;</li></ol> <p>相对旧工作流程，新工作流有以下优点：</p> <ol><li>在前后端分离模式中，后端人员完全不需要关注模板和静态资源;</li> <li>自动更新客户端缓存, 文件名哈希值根据文件内容生成;</li> <li>多语言图片嵌入优化;</li></ol> <h2 id="必备工具"><a href="#必备工具" class="header-anchor">#</a> 必备工具</h2> <ul><li><p>nodejs</p> <p>推荐版本：<code>v12.22.1</code>。<br>
 下载地址：<a href="https://nodejs.org/dist/latest-v12.x/node-v12.22.1-x64.msi" target="_blank" rel="noopener noreferrer">https://nodejs.org/dist/latest-v12.x/node-v12.22.1-x64.msi<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。<br>
@@ -49,7 +49,7 @@ IGG Cli 用于创建非前后端分离的项目， 项目地址： <a href="http
 └── assets-maps                         静态资源文件名映射JSON文件，由前端脚手架生成, 细节见后面操作流程
 </code></pre></div><ul><li>案例 1：SUS 游戏开发一个圣诞节活动<br>
 前端源码应存放于 <code>sus.igg.com</code> 仓库中的 <code>frontend/events/2021/xmas</code> 目录下。</li> <li>案例 2：开发 TP 游戏官网首页<br>
-前端源码应存放于 <code>dut.igg.com</code> 仓库中的 <code>frontend/homepage</code> 目录下。</li></ul> <h3 id="静态资源发布目录规范"><a href="#静态资源发布目录规范" class="header-anchor">#</a> 静态资源发布目录规范</h3> <p>静态资源发布在 <code>//statics.igg.com/assets/</code> 路径下。</p> <h4 id="上传方式"><a href="#上传方式" class="header-anchor">#</a> 上传方式</h4> <p>上传方式有以下两种：</p> <ol><li>项目仓库内的前端工程源码，合并到 <code>pre</code> 或者 <code>master</code> 分支时，由发布系统编译并上传;</li> <li>提交到 <code>gitlab</code> 仓库 <code>project-assets</code> 的文件，会由发布系统全量发布到对应路径下;</li></ol> <h4 id="路径规则"><a href="#路径规则" class="header-anchor">#</a> 路径规则</h4> <p>静态资源路径应遵循以下规则：</p> <ol><li>各游戏（项目）以游戏名(项目名)（优先取二级域名）建立在 <code>assets</code> 下， 例如 <code>sus</code> 的路径为: <code>/assets/sus</code>， 运营支撑系统为 <code>/assets/support</code>, 公共库文件为 <code>/assets/lib</code>。</li> <li>若项目为游戏，为区分以上两种上传方式，需要在游戏名下级建立 <code>dist</code> 和 <code>res</code> 目录，其中，通过项目仓库编译的资源目录为<code>dist</code> , 通过 <code>project-assets</code> 仓库上传的资源目录为 <code>res</code>。</li> <li>活动需要按年份分类, 存放于 <code>events</code> 目录中, 如: <code>/assets/sus/res/events/2021/demo-event</code>。</li> <li>目录及文件名为小写英文、数字及半角英文 <code>-</code>。</li> <li>目录名如为二个或以上单词用单横线-连接, 如 <code>/assets/sus/events/test-event</code>。</li></ol> <p>以下是目录结构示例：</p> <div class="language- extra-class"><pre class="language-text"><code>├── assets                                  根路径
+前端源码应存放于 <code>dut.igg.com</code> 仓库中的 <code>frontend/homepage</code> 目录下。</li></ul> <h3 id="静态资源发布目录规范"><a href="#静态资源发布目录规范" class="header-anchor">#</a> 静态资源发布目录规范</h3> <p>静态资源发布在 <code>//statics.igg.com/assets/</code> 路径下。</p> <h4 id="上传方式"><a href="#上传方式" class="header-anchor">#</a> 上传方式</h4> <p>上传方式有以下两种：</p> <ol><li>项目仓库内的前端工程源码，合并到 <code>pre</code> 或者 <code>master</code> 分支时，由发布系统编译并上传;</li> <li>提交到 <code>gitlab</code> 仓库 <code>project-assets</code> 的文件，会由发布系统全量发布到对应路径下;</li></ol> <h4 id="路径规则"><a href="#路径规则" class="header-anchor">#</a> 路径规则</h4> <p>静态资源路径应遵循以下规则：</p> <ol><li>各游戏（项目）以游戏名(项目名)（优先取二级域名）建立在 <code>assets</code> 下， 例如 <code>sus</code> 的路径为: <code>/assets/sus</code>， 运营支撑系统为 <code>/assets/support</code>, 公共库文件为 <code>/assets/lib</code>。</li> <li>若项目为游戏，为区分以上两种上传方式，需要在游戏名下级建立 <code>dist</code> 和 <code>res</code> 目录，其中，通过项目仓库编译的资源目录为<code>dist</code> , 通过 <code>project-assets</code> 仓库上传的资源目录为 <code>res</code>。</li> <li>活动需要按年份分类, 存放于 <code>events</code> 目录中, 如: <code>/assets/sus/res/events/2021/demo-event</code>。</li> <li>目录及文件名为小写英文、数字及半角英文 <code>-</code>。</li> <li>目录名如为二个或以上单词用单横线-连接, 如 <code>/assets/sus/events/2021/test-event</code>。</li></ol> <p>以下是目录结构示例：</p> <div class="language- extra-class"><pre class="language-text"><code>├── assets                                  根路径
 |  └── lib                                  一级目录以项目名为目录名
 |     └── jquery
 |     └── vue
@@ -79,23 +79,26 @@ IGG Cli 用于创建非前后端分离的项目， 项目地址： <a href="http
 
 </code></pre></div><p><strong>注意</strong>： 从属于游戏的活动或者非活动资源，需要放在 <code>dist</code> 或者 <code>res</code> 路径下，以区分编译资源和直接上传的资源。<br>
 资源应在哪个路径下，一个简单的判断规则是，如果你的资源是集成在活动仓库内，应在 <code>dist</code> 目录下，如果在 <code>project-assets</code> 仓库内，则应在 <code>res</code> 目录下。</p> <h2 id="开发流程细节"><a href="#开发流程细节" class="header-anchor">#</a> 开发流程细节</h2> <h3 id="前后端不分离模式"><a href="#前后端不分离模式" class="header-anchor">#</a> 前后端不分离模式</h3> <h4 id="前端开发人员流程"><a href="#前端开发人员流程" class="header-anchor">#</a> 前端开发人员流程</h4> <ol><li><p>选择开发分支<br>
-请按与后端开发人员约定好的分支进行开发。</p></li> <li><p>建立项目工程<br>
-通过 <code>IGG Cli</code> 的项目模板创建工程, 工程目录应遵循 <code>前端工程源码存放目录规范</code>。</p> <div class="language- extra-class"><pre class="language-text"><code> igg create demo-event
+在与后端开发人员约定好的分支进行开发。</p></li> <li><p>建立项目工程<br>
+通过 <code>IGG Cli</code> 的 <code>create</code> 命令创建项目模板, 工程目录应遵循前述 <em>前端工程源码存放目录规范</em>, 在开发目录下的命令行输入：</p> <div class="language- extra-class"><pre class="language-text"><code> igg create demo-event
 </code></pre></div><p>之后，项目脚手架将通过问答进行项目配置，具体配置及解释如下：</p> <ol><li>活动名称（eventName）<br>
-输入项目的活动名称，需要为英文, 此项必填。</li> <li>输入发布路径（publicPath）<br>
-输入项目静态资源发布路径，即按以上静态资源目录规范，本项目的静态资源应发布在何路径下，之后，Cli 工具将会替换项目模板相关变量。</li> <li>选择 web 路径（webPath）<br>
-web 路径有两种，一种为项目根目录，一种为项目 <code>public</code> 目录，各项目不同，请咨询该项目后端开发人员。此配置将写入打包生成的静态资源映射文件中。</li> <li>选择需要的模块（modules）<br>
-目前，有四个预置公共库可供选择，<code>jQuery</code>, <code>Vue</code>, <code>axios</code>和<code>vant</code>。</li> <li>活动平台类型/主题（eventType）<br>
+输入项目的活动名称，需要为英文、数字和英文连接符 <code>-</code> , 此项必填。</li> <li>输入发布路径（publicPath）<br>
+输入项目静态资源发布路径，即按以上静态资源目录规范，本项目的静态资源应发布在何路径下，之后，Cli 工具将会替换项目模板相关变量。<br> <strong>注意：</strong> 路径名中需要包含 <code>dist</code>。</li> <li>选择 web 路径（webPath）<br>
+web 路径有两种，一种为项目根目录，一种为项目 <code>public</code> 目录，各项目不同，请咨询该项目后端开发人员。<br>
+此配置将写入打包生成的静态资源映射文件中(即 <code>assets-map</code> 目录对应的 <code>assets.json</code> 文件)。</li> <li>选择需要的模块（modules）<br>
+目前，有四个预置公共库可供选择，<code>jQuery</code>, <code>vue</code>, <code>axios</code> 和 <code>vant</code>。</li> <li>活动平台类型/主题（eventType）<br>
 此配置有四个选项， 请根据项目情况选择：
 <ul><li>PC</li> <li>Mobile</li> <li>PC &amp; Mobile</li> <li>自定义名称</li></ul></li> <li>输入主题名（themeName）<br>
-主题目录名，当上一配置为<code>自定义名称</code>时，需要填写此配置。</li></ol></li> <li><p>前端开发阶段<br>
+主题目录名，当上一配置选择<code>自定义名称</code>时，需要填写此配置。</li></ol></li> <li><p>前端开发阶段<br>
 前端开发人员进行页面制作及表现类功能的 JS 编写。</p></li> <li><p>项目交付<br>
 当完成前端开发后且提交代码后，将前端源码路径告知后端开发人员即完成交付。</p></li></ol> <h4 id="后端开发人员流程"><a href="#后端开发人员流程" class="header-anchor">#</a> 后端开发人员流程</h4> <ol><li><p>生成本地静态资源文件及模板文件
 在前端开发完成得到前端源代码目录路径时，在前端源代码目录下，运行：</p> <div class="language- extra-class"><pre class="language-text"><code>yarn build:dev
 </code></pre></div><p>此时，会生成两类文件，分别是：</p> <ul><li><p>静态资源文件及模板文件<br>
 静态资源文件用于本地开发， 生成在仓库根目录的 <code>/auto-assets/</code> 路径下，如前端源码目录为 <code>frontend/events/2021/demo-event</code> , 则此项目的本地静态资源文件在 <code>/auto-assets/events/2021/demo-event</code> 中。<br>
 模板文件位于 <code>/auto-assets/events/2021/demo-event/pages</code> 文件夹中, 该文件夹内有 <code>.html</code> 和对应的 <code>.phtml</code> 文件，请将 <code>.phtml</code> 拷贝至活动正式的模板目录中。</p></li> <li><p>静态资源映射文件<br>
-因生成的静态资源是根据文件内容生成哈希值在文件名上，所以当文件内容变化时，文件名也会产生变化，因此，当每次前端工程编译时，会根据静态资源的文件名，生成一份静态资源映射文件， 在仓库根目录的 <code>/assets-map/</code> 路径下，如前端源码目录为 <code>frontend/events/2021/demo-event</code> , 则此项目的映射文件在 <code>/assets-map/events/2021/demo-event</code> 中， 文件内容示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code> {
+因生成的静态资源是根据文件内容生成哈希值在文件名上，所以当文件内容变化时，文件名也会产生变化，因此，在每次前端工程编译时，会根据静态资源的文件名， 在仓库根目录的 <code>/assets-map/</code> 路径下生成一份静态资源映射文件。<br>
+如前端源码目录为 <code>frontend/events/2021/demo-event</code> , 则此项目的映射文件在 <code>/assets-map/events/2021/demo-event</code> 中。<br>
+文件内容示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code> {
    &quot;publicPath&quot;: &quot;//statics.igg.com/assets/sus/dist/events/2021/test-event/&quot;, // 该项目发布路径
    &quot;webPath&quot;: &quot;/&quot;, // 本项目仓库的web路径
    &quot;assets&quot;: {
@@ -126,6 +129,6 @@ web 路径有两种，一种为项目根目录，一种为项目 <code>public</c
   <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">VuePress</a>
   | Theme
   <a href="https://github.com/viko16/vuepress-theme-simple" rel="noopener" target="_blank">Simple</a></footer></div><div class="global-ui"></div></div>
-    <script src="/vuepress-blog/assets/js/app.7a953d33.js" defer></script><script src="/vuepress-blog/assets/js/3.d7b46cbf.js" defer></script><script src="/vuepress-blog/assets/js/16.7ff0e1f3.js" defer></script>
+    <script src="/vuepress-blog/assets/js/app.fb0d49e7.js" defer></script><script src="/vuepress-blog/assets/js/3.d7b46cbf.js" defer></script><script src="/vuepress-blog/assets/js/16.0aa4aad9.js" defer></script>
   </body>
 </html>
