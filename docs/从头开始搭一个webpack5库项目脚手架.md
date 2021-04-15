@@ -142,7 +142,7 @@ module: {
 7. 安装 HtmlWebpackPlugin
 
 ```
-yarn add -D HtmlWebpackPlugin
+yarn add -D html-webpack-plugin
 ```
 
 然后在 webpack.config.js, 增加 HtmlWebpackPlugin 配置
