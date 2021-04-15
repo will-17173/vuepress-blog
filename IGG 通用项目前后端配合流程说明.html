@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>前后端配合工作流说明 | Nothing Here</title>
+    <title>IGG 通用项目前后端配合流程说明 | Nothing Here</title>
     <meta name="generator" content="VuePress 1.8.0">
     
     <meta name="description" content="什么都没有">
     
-    <link rel="preload" href="/vuepress-blog/assets/css/1.styles.709f6203.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.fb0d49e7.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/3.d7b46cbf.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/16.0aa4aad9.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.ec2cdb3b.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.b51e2596.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.812ca7e8.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.e25cac9c.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.7a9d0fb7.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.8d405573.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.19a3e7ad.js"><link rel="prefetch" href="/vuepress-blog/assets/js/2.21ebc214.js"><link rel="prefetch" href="/vuepress-blog/assets/js/4.1099819e.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.1bfec37d.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.dc5e901a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.2dd73b7f.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.750656c5.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.7e14d47c.js">
+    <link rel="preload" href="/vuepress-blog/assets/css/1.styles.709f6203.css" as="style"><link rel="preload" href="/vuepress-blog/assets/js/app.01c6f053.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/4.fb1022f2.js" as="script"><link rel="preload" href="/vuepress-blog/assets/js/2.37cb18e6.js" as="script"><link rel="prefetch" href="/vuepress-blog/assets/js/10.2d78fc38.js"><link rel="prefetch" href="/vuepress-blog/assets/js/11.90bb51b3.js"><link rel="prefetch" href="/vuepress-blog/assets/js/12.30c81323.js"><link rel="prefetch" href="/vuepress-blog/assets/js/13.1918f477.js"><link rel="prefetch" href="/vuepress-blog/assets/js/14.72ab425a.js"><link rel="prefetch" href="/vuepress-blog/assets/js/15.f7b95c27.js"><link rel="prefetch" href="/vuepress-blog/assets/js/16.18262cad.js"><link rel="prefetch" href="/vuepress-blog/assets/js/17.d8fe44f2.js"><link rel="prefetch" href="/vuepress-blog/assets/js/18.1363dee4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/3.cbd40dcd.js"><link rel="prefetch" href="/vuepress-blog/assets/js/5.42b55a68.js"><link rel="prefetch" href="/vuepress-blog/assets/js/6.a1f247a4.js"><link rel="prefetch" href="/vuepress-blog/assets/js/7.c878a305.js"><link rel="prefetch" href="/vuepress-blog/assets/js/8.99cd6b17.js"><link rel="prefetch" href="/vuepress-blog/assets/js/9.d07fffd5.js">
     <link rel="stylesheet" href="/vuepress-blog/assets/css/1.styles.709f6203.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container vuepress-theme-simple"><header class="header"><a href="/vuepress-blog/" title="什么都没有" class="site-name router-link-active">
       Nothing Here
     </a> <div style="clear: both"></div> <!----></header> <section class="post-view"><div class="post-head"><h1 class="post-title">
-      前后端配合工作流说明
-    </h1> <time datetime="4/8/2021, 7:08:49 AM" title="4/8/2021, 7:08:49 AM" pubdate="pubdate" class="post-date">
+      IGG 通用项目前后端配合流程说明
+    </h1> <time datetime="4/15/2021, 3:58:50 AM" title="4/15/2021, 3:58:50 AM" pubdate="pubdate" class="post-date">
   1 minute ago
-</time></div> <div class="content__default"><h1 id="前后端配合工作流说明"><a href="#前后端配合工作流说明" class="header-anchor">#</a> 前后端配合工作流说明</h1> <h2 id="流程介绍"><a href="#流程介绍" class="header-anchor">#</a> 流程介绍</h2> <p>在新的工作流中，分为前后端不分离模式和前后端分离模式。</p> <ul><li>不分离模式：前端人员在<strong>项目仓库中</strong>开发活动，开发完成后告知后端人员开发目录路径，后端人员打包生成模板文件，之后在模板页面开发，直至开发完成部署上线;</li> <li>分离模式：前端人员在<strong>项目仓库中</strong>开发活动，后端提供接口给前端使用，开发完成后进行联调，直至完成开发部署上线。此开发流程中后端人员不需要关注模板文件;</li></ul> <p>与旧工作流程相比，新流程主要有以下几点不同：</p> <ol><li>前端工程源码存放于项目仓库;</li> <li>静态资源由发布系统编译并发布;</li> <li>交付给后端的模板由后端人员编译得到;</li> <li>后端人员在本地开发时静态资源读取的是本地文件;</li></ol> <p>相对旧工作流程，新工作流有以下优点：</p> <ol><li>在前后端分离模式中，后端人员完全不需要关注模板和静态资源;</li> <li>自动更新客户端缓存, 文件名哈希值根据文件内容生成;</li> <li>多语言图片嵌入优化;</li></ol> <h2 id="必备工具"><a href="#必备工具" class="header-anchor">#</a> 必备工具</h2> <ul><li><p>nodejs</p> <p>推荐版本：<code>v12.22.1</code>。<br>
+</time></div> <div class="content__default"><h1 id="igg-通用项目前后端配合流程说明"><a href="#igg-通用项目前后端配合流程说明" class="header-anchor">#</a> IGG 通用项目前后端配合流程说明</h1> <h2 id="流程介绍"><a href="#流程介绍" class="header-anchor">#</a> 流程介绍</h2> <p>在新的工作流中，分为前后端不分离模式和前后端分离模式。</p> <ul><li>不分离模式：前端人员在<strong>项目仓库中</strong>开发活动，开发完成后告知后端人员开发目录路径，后端人员执行 <code>yarn build:dev</code> 生成模板文件，复制对应模板文件作为程序 html 模板进行开发，若前端模板文件结构有调整，需要前后端人员配合完成程序模板调整，直至开发完成部署上线;</li> <li>分离模式：前端人员在<strong>项目仓库中</strong>开发活动，后端提供接口给前端使用，开发完成后进行联调，直至完成开发部署上线。此开发流程中后端人员不需要关注模板文件;</li></ul> <p>与旧工作流程相比，新流程主要有以下几点不同：</p> <ol><li>前端工程源码存放于项目仓库;</li> <li>静态资源由发布系统编译并发布;</li> <li>交付给后端的模板由后端人员编译得到;</li> <li>后端人员在本地开发时静态资源读取的是本地文件;</li></ol> <p>相对旧工作流程，新工作流有以下优点：</p> <ol><li>在前后端分离模式中，后端人员完全不需要关注模板和静态资源;</li> <li>自动更新客户端缓存, 文件名哈希值根据文件内容生成;</li> <li>多语言图片嵌入优化;</li></ol> <h2 id="必备工具"><a href="#必备工具" class="header-anchor">#</a> 必备工具</h2> <ul><li><p>nodejs</p> <p>推荐版本：<code>v12.22.1</code>。<br>
 下载地址：<a href="https://nodejs.org/dist/latest-v12.x/node-v12.22.1-x64.msi" target="_blank" rel="noopener noreferrer">https://nodejs.org/dist/latest-v12.x/node-v12.22.1-x64.msi<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。<br>
 安装后设置 npm 源为淘宝镜像可以加快安装速度：</p> <div class="language- extra-class"><pre class="language-text"><code>npm config set registry https://registry.npm.taobao.org
 </code></pre></div><p>另外，需要配置 <code>@igg</code> 前缀的包的 <code>registry</code> 为内网私有库地址：</p> <div class="language- extra-class"><pre class="language-text"><code>npm config set @igg:registry http://fe.skyunion.net:8081
@@ -34,7 +34,29 @@ IGG Cli 用于创建非前后端分离的项目， 项目地址： <a href="http
 使用方法：</p> <ol><li>安装 <code>Vue Cli</code>:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>npm i -g @vue/cli
 </code></pre></div><ol start="2"><li>使用 <code>Vue Cli</code> 创建项目:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>vue create demo-event
 </code></pre></div><ol start="3"><li>项目创建完成后，再添加此插件:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>vue add @igg/vue-cli-plugin-igg-event
-</code></pre></div></li></ul> <h2 id="php-sdk"><a href="#php-sdk" class="header-anchor">#</a> PHP SDK</h2> <h2 id="目录规范"><a href="#目录规范" class="header-anchor">#</a> 目录规范</h2> <h3 id="前端工程源码存放目录规范"><a href="#前端工程源码存放目录规范" class="header-anchor">#</a> 前端工程源码存放目录规范</h3> <p>当前端工程存放于项目仓库时，应按以下目录规则存放：</p> <div class="language- extra-class"><pre class="language-text"><code>├── frontend                            前端工程源码
+</code></pre></div></li></ul> <h2 id="php-sdk"><a href="#php-sdk" class="header-anchor">#</a> PHP SDK</h2> <h2 id="php-sdk-包地址"><a href="#php-sdk-包地址" class="header-anchor">#</a> PHP SDK 包地址</h2> <p><a href="https://git.skyunion.net/frontend/frontend-sdk" target="_blank" rel="noopener noreferrer">https://git.skyunion.net/frontend/frontend-sdk<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="php-sdk-基本用法"><a href="#php-sdk-基本用法" class="header-anchor">#</a> PHP SDK 基本用法</h3> <p>更详细的用法可以去 git 仓库查看 readme 文档</p> <div class="language- extra-class"><pre class="language-text"><code>use IGG\Frontend\Template;
+
+// 本地开发时，需要声明一个常量，这个时候会直接加载本地文件
+define('ASSETS_DEV', TRUE);
+
+// 站点根目录绝对路径
+$rootPath = dirname(dirname(__DIR__));
+
+// 传入活动前端资源映射assets.json所在目录，存放在站点根目录/assets-maps下，由前端组脚本生成
+Template::instance($rootPath, array('events/2021/test-event/', 'events/2021/test/'));
+
+// 获得一个无语言区分的文件公网地址
+staticFile('events/2021/test-event/css/mobile/index.css');
+
+// 获得英文资源文件公网地址
+staticFile('events/2021/test-event/img/1.png', 'eng');
+
+// 假如资源是多语言的，但是未传语言，则默认取配置第一张图片做为地址返回
+staticFile('events/2021/test-event/img/1.png');
+
+// 方法默认直接输出，不需要输出则使用第三个参数传0
+staticFile('events/2021/test-event/img/1.png', '', 0);
+</code></pre></div><h2 id="目录规范"><a href="#目录规范" class="header-anchor">#</a> 目录规范</h2> <h3 id="前端工程源码存放目录规范"><a href="#前端工程源码存放目录规范" class="header-anchor">#</a> 前端工程源码存放目录规范</h3> <p>当前端工程存放于项目仓库时，应按以下目录规则存放：</p> <div class="language- extra-class"><pre class="language-text"><code>├── frontend                            【进版本库】前端工程源码
 |  └── events                           活动目录
 |     └── 2021                          活动年份
 |        └── demo-event                 活动名
@@ -45,8 +67,10 @@ IGG Cli 用于创建非前后端分离的项目， 项目地址： <a href="http
 |  └── dist
 |  └── jenkins.config.json
 |  └── package.json
-└── auto-assets                         用于本地开发的静态资源目录，由前端脚手架生成, 细节见后面操作流程
-└── assets-maps                         静态资源文件名映射JSON文件，由前端脚手架生成, 细节见后面操作流程
+└── auto-assets                         【不进版本库】用于本地开发的静态资源目录，由前端脚手架生成, 细节见后面操作流程（如站点web root指向在代码根目录)
+└── assets-maps                         【进版本库】静态资源文件名映射JSON文件，由前端脚手架生成, 细节见后面操作流程
+└── public                              * 如果web root为public时，项目根目录会存在这个文件夹
+|  └── auto-assets                      * 【不进版本库】功能同根目录的auto-assets/, 如站点web root是在public目录下，则这个目录会自动生成到此处
 </code></pre></div><ul><li>案例 1：SUS 游戏开发一个圣诞节活动<br>
 前端源码应存放于 <code>sus.igg.com</code> 仓库中的 <code>frontend/events/2021/xmas</code> 目录下。</li> <li>案例 2：开发 TP 游戏官网首页<br>
 前端源码应存放于 <code>dut.igg.com</code> 仓库中的 <code>frontend/homepage</code> 目录下。</li></ul> <h3 id="静态资源发布目录规范"><a href="#静态资源发布目录规范" class="header-anchor">#</a> 静态资源发布目录规范</h3> <p>静态资源发布在 <code>//statics.igg.com/assets/</code> 路径下。</p> <h4 id="上传方式"><a href="#上传方式" class="header-anchor">#</a> 上传方式</h4> <p>上传方式有以下两种：</p> <ol><li>项目仓库内的前端工程源码，合并到 <code>pre</code> 或者 <code>master</code> 分支时，由发布系统编译并上传;</li> <li>提交到 <code>gitlab</code> 仓库 <code>project-assets</code> 的文件，会由发布系统全量发布到对应路径下;</li></ol> <h4 id="路径规则"><a href="#路径规则" class="header-anchor">#</a> 路径规则</h4> <p>静态资源路径应遵循以下规则：</p> <ol><li>各游戏（项目）以游戏名(项目名)（优先取二级域名）建立在 <code>assets</code> 下， 例如 <code>sus</code> 的路径为: <code>/assets/sus</code>， 运营支撑系统为 <code>/assets/support</code>, 公共库文件为 <code>/assets/lib</code>。</li> <li>若项目为游戏，为区分以上两种上传方式，需要在游戏名下级建立 <code>dist</code> 和 <code>res</code> 目录，其中，通过项目仓库编译的资源目录为<code>dist</code> , 通过 <code>project-assets</code> 仓库上传的资源目录为 <code>res</code>。</li> <li>活动需要按年份分类, 存放于 <code>events</code> 目录中, 如: <code>/assets/sus/res/events/2021/demo-event</code>。</li> <li>目录及文件名为小写英文、数字及半角英文 <code>-</code>。</li> <li>目录名如为二个或以上单词用单横线-连接, 如 <code>/assets/sus/events/2021/test-event</code>。</li></ol> <p>以下是目录结构示例：</p> <div class="language- extra-class"><pre class="language-text"><code>├── assets                                  根路径
@@ -78,7 +102,7 @@ IGG Cli 用于创建非前后端分离的项目， 项目地址： <a href="http
 |                       └── img
 
 </code></pre></div><p><strong>注意</strong>： 从属于游戏的活动或者非活动资源，需要放在 <code>dist</code> 或者 <code>res</code> 路径下，以区分编译资源和直接上传的资源。<br>
-资源应在哪个路径下，一个简单的判断规则是，如果你的资源是集成在活动仓库内，应在 <code>dist</code> 目录下，如果在 <code>project-assets</code> 仓库内，则应在 <code>res</code> 目录下。</p> <h2 id="开发流程细节"><a href="#开发流程细节" class="header-anchor">#</a> 开发流程细节</h2> <h3 id="前后端不分离模式"><a href="#前后端不分离模式" class="header-anchor">#</a> 前后端不分离模式</h3> <h4 id="前端开发人员流程"><a href="#前端开发人员流程" class="header-anchor">#</a> 前端开发人员流程</h4> <ol><li><p>选择开发分支<br>
+资源应在哪个路径下，一个简单的判断规则是，如果你的资源是集成在活动仓库内，应在 <code>dist</code> 目录下，如果在 <code>project-assets</code> 仓库内，则应在 <code>res</code> 目录下。</p> <h2 id="开发流程细节"><a href="#开发流程细节" class="header-anchor">#</a> 开发流程细节</h2> <h3 id="前后端不分离模式"><a href="#前后端不分离模式" class="header-anchor">#</a> 前后端不分离模式</h3> <h4 id="流程图"><a href="#流程图" class="header-anchor">#</a> 流程图</h4> <p><img src="/vuepress-blog/assets/img/workflow.4ad4ebac.png" alt="workflow"></p> <h4 id="前端开发人员流程"><a href="#前端开发人员流程" class="header-anchor">#</a> 前端开发人员流程</h4> <ol><li><p>选择开发分支<br>
 在与后端开发人员约定好的分支进行开发。</p></li> <li><p>建立项目工程<br>
 通过 <code>IGG Cli</code> 的 <code>create</code> 命令创建项目模板, 工程目录应遵循前述 <em>前端工程源码存放目录规范</em>, 在开发目录下的命令行输入：</p> <div class="language- extra-class"><pre class="language-text"><code> igg create demo-event
 </code></pre></div><p>之后，项目脚手架将通过问答进行项目配置，具体配置及解释如下：</p> <ol><li>活动名称（eventName）<br>
@@ -91,13 +115,19 @@ web 路径有两种，一种为项目根目录，一种为项目 <code>public</c
 <ul><li>PC</li> <li>Mobile</li> <li>PC &amp; Mobile</li> <li>自定义名称</li></ul></li> <li>输入主题名（themeName）<br>
 主题目录名，当上一配置选择<code>自定义名称</code>时，需要填写此配置。</li></ol></li> <li><p>前端开发阶段<br>
 前端开发人员进行页面制作及表现类功能的 JS 编写。</p></li> <li><p>项目交付<br>
-当完成前端开发后且提交代码后，将前端源码路径告知后端开发人员即完成交付。</p></li></ol> <h4 id="后端开发人员流程"><a href="#后端开发人员流程" class="header-anchor">#</a> 后端开发人员流程</h4> <ol><li><p>生成本地静态资源文件及模板文件
-在前端开发完成得到前端源代码目录路径时，在前端源代码目录下，运行：</p> <div class="language- extra-class"><pre class="language-text"><code>yarn build:dev
+当完成前端开发后且提交代码后，将前端源码路径告知后端开发人员即完成交付。</p></li></ol> <h4 id="后端开发人员流程"><a href="#后端开发人员流程" class="header-anchor">#</a> 后端开发人员流程</h4> <ol><li><p>生成本地静态资源文件及模板文件<br>
+在前端开发完成得到前端源代码目录路径时，在前端源代码目录下，运行：</p> <div class="language- extra-class"><pre class="language-text"><code>// 1. 安装项目依赖包
+yarn
+
+// 2. 生成静态资源
+yarn build:dev
 </code></pre></div><p>此时，会生成两类文件，分别是：</p> <ul><li><p>静态资源文件及模板文件<br>
-静态资源文件用于本地开发， 生成在仓库根目录的 <code>/auto-assets/</code> 路径下，如前端源码目录为 <code>frontend/events/2021/demo-event</code> , 则此项目的本地静态资源文件在 <code>/auto-assets/events/2021/demo-event</code> 中。<br>
-模板文件位于 <code>/auto-assets/events/2021/demo-event/pages</code> 文件夹中, 该文件夹内有 <code>.html</code> 和对应的 <code>.phtml</code> 文件，请将 <code>.phtml</code> 拷贝至活动正式的模板目录中。</p></li> <li><p>静态资源映射文件<br>
+静态资源文件用于本地开发，生成在仓库根目录的 <code>/auto-assets/</code> 路径下(web root 为 public 时，这个目录会生成到/public/auto-assets/),
+如前端源码目录为 <code>frontend/events/2021/demo-event</code> , 则此项目的本地静态资源文件在 <code>/auto-assets/events/2021/demo-event</code> 中。
+模板文件位于 <code>/auto-assets/events/2021/demo-event/pages</code> 文件夹中, 该文件夹内有 <code>.html</code> 和对应的 <code>.phtml</code> 文件，请将 <code>.phtml</code> 文件拷贝至活动正式的模板目录中。</p></li> <li><p>静态资源映射文件<br>
 因生成的静态资源是根据文件内容生成哈希值在文件名上，所以当文件内容变化时，文件名也会产生变化，因此，在每次前端工程编译时，会根据静态资源的文件名， 在仓库根目录的 <code>/assets-map/</code> 路径下生成一份静态资源映射文件。<br>
 如前端源码目录为 <code>frontend/events/2021/demo-event</code> , 则此项目的映射文件在 <code>/assets-map/events/2021/demo-event</code> 中。<br>
+在模板文件中，插入的是文件的键名，如<code>&lt;?php staticFile('events/2021/test-event/css/mobile/index.css') ?&gt;</code>, <code>PHP SDK</code> 根据键名及环境，在静态资源映射文件中找到对应的静态资源并插入。<br>
 文件内容示例如下：</p> <div class="language- extra-class"><pre class="language-text"><code> {
    &quot;publicPath&quot;: &quot;//statics.igg.com/assets/sus/dist/events/2021/test-event/&quot;, // 该项目发布路径
    &quot;webPath&quot;: &quot;/&quot;, // 本项目仓库的web路径
@@ -106,19 +136,26 @@ web 路径有两种，一种为项目根目录，一种为项目 <code>public</c
      &quot;events/2021/test-event/img/1.png&quot;: { &quot;chs&quot;: &quot;img/1--chs.cdbc815d.png&quot;, &quot;eng&quot;: &quot;img/1--eng.cdbc815d.png&quot; } // 多语言图片的文件映射
    }
  }
-</code></pre></div></li></ul></li> <li><p>后端开发阶段<br> <strong>注意</strong>: 在进行 JS 开发时，为了维护方便，应尽量使用外链 JS 的方式进行开发。</p></li></ol> <h3 id="前后端分离模式"><a href="#前后端分离模式" class="header-anchor">#</a> 前后端分离模式</h3> <h4 id="前端开发人员流程-2"><a href="#前端开发人员流程-2" class="header-anchor">#</a> 前端开发人员流程</h4> <ol><li><p>选择开发分支<br>
+</code></pre></div></li></ul></li> <li><p>获得模板文件
+在对应目录找到 index.phtml 文件，复制到程序自己的模板目录内进行开发</p></li> <li><p>后端开发阶段
+业务开发...</p></li> <li><p>模板变更
+假如在开发过程中需求变动、逻辑优化等原因，模板发生变动，在前端提交代码后，开发可以拉取最新的前端代码，然后重新执行步骤 1。与前端同学一起将 dom 变动改到程序模板上。</p></li> <li><p>发布上线</p></li></ol> <h3 id="前后端分离模式"><a href="#前后端分离模式" class="header-anchor">#</a> 前后端分离模式</h3> <h4 id="流程图-2"><a href="#流程图-2" class="header-anchor">#</a> 流程图</h4> <p><img src="/vuepress-blog/assets/img/workflow2.1a43043b.png" alt="workflow"></p> <h4 id="前端开发人员流程-2"><a href="#前端开发人员流程-2" class="header-anchor">#</a> 前端开发人员流程</h4> <ol><li><p>选择开发分支<br>
 请按与后端开发人员约定好的分支进行开发。</p></li> <li><p>接口定义<br>
 应对页面功能进行分析，并配合后端开发人员页面用到的接口及字段进行定义，最终由后端开发人员提供接口文档给前端。</p></li> <li><p>数据 MOCK<br>
 根据接口文档，在 <a href="http://fe.skyunion.net:8082/" target="_blank" rel="noopener noreferrer">YAPI<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 上做数据 MOCK。</p></li> <li><p>建立项目工程<br>
-通过<code>Vue Cli</code>及<code>vue-cli-plugin-igg-event</code>创建工程, 工程目录应遵循<code>前端工程源码存放目录规范</code>：</p> <ol><li>通过<code>Vue Cli</code>创建项目</li></ol> <div class="language- extra-class"><pre class="language-text"><code>vue create demo-event
-</code></pre></div><ol><li>添加<code>vue-cli-plugin-igg-event</code>插件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>vue add @igg/vue-cli-plugin-igg-event
-</code></pre></div><p>此时，插件通过问答进行项目配置，配置及解释与上述非前后端分离开发流程中使用<code>IGG Cli</code>创建项目中的问答一致的部分此处不再赘述。 不同的是，此流程需要额外配置模板的存放路径，即编译后的模板文件应存放于哪个目录下。</p></li> <li><p>前端开发阶段<br>
+通过 <code>Vue Cli</code> 及 <code>vue-cli-plugin-igg-event</code> 创建工程, 工程目录应遵循<code>前端工程源码存放目录规范</code>：</p> <ol><li>通过 <code>Vue Cli</code> 创建项目</li></ol> <div class="language- extra-class"><pre class="language-text"><code>vue create demo-event
+</code></pre></div><ol><li>添加 <code>vue-cli-plugin-igg-event</code> 插件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>vue add @igg/vue-cli-plugin-igg-event
+</code></pre></div><p>此时，插件通过问答进行项目配置，配置及解释与上述非前后端分离开发流程中使用 <code>IGG Cli</code> 创建项目中的问答一致的部分此处不再赘述。<br>
+不同的是，此流程需要额外配置模板的存放路径，即编译后的模板文件应存放于哪个目录下。</p></li> <li><p>前端开发阶段<br>
 进行页面制作及功能开发。</p></li> <li><p>联调阶段<br>
-将接口域名设置为后端提供的地址，进行联调。</p></li></ol> <h4 id="后端开发人员流程-2"><a href="#后端开发人员流程-2" class="header-anchor">#</a> 后端开发人员流程</h4> <ol><li>接口定义
-与前端开发人员配合分析页面功能及定义接口及字段，并提供接口文档。</li> <li>后端开发阶段</li> <li>联调阶段
-与前端开发人员配合进行接口联调。</li></ol> <h3 id="项目发布"><a href="#项目发布" class="header-anchor">#</a> 项目发布</h3> <p>将开发分支合并到预发布环境(分支名必须为 pre)或者生产环境(分支名必须为 master)并执行手动发布或者自动发布, 发布系统检测到前端工程文件发生变化，将执行编译命令，之后将编译后的静态资源文件上传到 <code>statics.igg.com</code> , 完成发布。</p> <h3 id="前后端不分离模式下的项目修改"><a href="#前后端不分离模式下的项目修改" class="header-anchor">#</a> 前后端不分离模式下的项目修改</h3> <p>当项目发布上线需要修改时，原则上，谁开发的代码应由谁修改：</p> <ul><li>对于前端开发人员<br>
+将接口域名设置为后端提供的地址，进行联调。</p></li></ol> <h4 id="后端开发人员流程-2"><a href="#后端开发人员流程-2" class="header-anchor">#</a> 后端开发人员流程</h4> <ol><li>接口定义<br>
+与前端开发人员配合分析页面功能及定义接口及字段，并提供接口文档。</li> <li>后端开发阶段</li> <li>联调阶段<br>
+与前端开发人员配合进行接口联调。</li></ol> <h3 id="项目发布"><a href="#项目发布" class="header-anchor">#</a> 项目发布</h3> <p>将开发分支合并到预发布环境(分支名必须为 pre)或者生产环境(分支名必须为 master)并执行手动或者自动发布, 发布系统检测到前端工程文件发生变化，将根据当前分支，如为 <code>pre</code> 则执行 <code>npm build:pre</code> 命令，如为 <code>master</code> 分支则执行<code>npm build</code> 命令，之后将编译后的静态资源文件上传到 <code>statics.igg.com</code> , 完成发布。</p> <h3 id="gitignore-的修改"><a href="#gitignore-的修改" class="header-anchor">#</a> .gitignore 的修改</h3> <p>项目的.gitignore 文件需增加以下几条，以排除前端项目中不需要提交的文件：</p> <div class="language- extra-class"><pre class="language-text"><code>node_modules/
+dist/
+auto-assets/
+</code></pre></div><p>请严格按以上格式拷入.gitignore 文件</p> <h3 id="前后端不分离模式下的项目修改"><a href="#前后端不分离模式下的项目修改" class="header-anchor">#</a> 前后端不分离模式下的项目修改</h3> <p>当项目发布上线需要修改时，原则上，谁开发的代码应由谁修改：</p> <ul><li>对于前端开发人员<br>
 在前端工程内修改完毕，如涉及页面结构修改，因模板文件内添加了 PHP 代码及 JS 代码， 大多数情况下，不能再使用编译生成的模板文件，应在原开发过的模板中修改。</li> <li>对于后端开发人员<br>
-在前端开发人员提交代码变更后，在前端开发目录下执行一次<code>build:dev</code>命令以后成新的本地静态资源文件。</li></ul> <h2 id="多语言图片处理"><a href="#多语言图片处理" class="header-anchor">#</a> 多语言图片处理</h2> <p>当页面中需要根据页面语言插入对应语言的图片时，应将图片命名为<code>图片名--语言编码</code>格式, 如： <code>img--eng.jpg</code>、<code>img--chs.jpg</code>, PHP SDK 会根据当前页面语言找到对应图片并插入。<br>
+在前端开发人员提交代码变更后，在前端开发目录下执行一次 <code>build:dev</code> 命令以生成新的本地静态资源文件。</li></ul> <h2 id="多语言图片处理"><a href="#多语言图片处理" class="header-anchor">#</a> 多语言图片处理</h2> <p>当页面中需要根据页面语言插入对应语言的图片时，应将图片命名为<code>图片名--语言编码</code>格式, 如： <code>img--eng.jpg</code>、<code>img--chs.jpg</code>, PHP SDK 会根据当前页面语言找到对应图片并插入。<br>
 语言编码为三位，可参考<a href="https://wiki.skyunion.net/index.php?title=%E5%9B%BD%E5%AE%B6/%E5%9C%B0%E5%8C%BA%E8%AF%AD%E8%A8%80%E6%A0%87%E5%87%86%E5%AF%B9%E7%85%A7" target="_blank" rel="noopener noreferrer">此链接<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中的第三点<em>语言编码</em>。<br>
 本地开发时，可选择插入任意一张图片, 项目脚手架会编译 <code>src/assets/img</code> 文件夹内的所有图片。</p> <h2 id="客户端缓存管理"><a href="#客户端缓存管理" class="header-anchor">#</a> 客户端缓存管理</h2> <p>编译后的文件根据文件内容带 8 位 hash 值, 再由页面模板自动更新文件名以清除客户端缓存。</p> <h2 id="垃圾文件清理策略"><a href="#垃圾文件清理策略" class="header-anchor">#</a> 垃圾文件清理策略</h2> <p>编译生成的静态资源文件名带哈希值，当文件内容变化时产生的文件名也不同，当新文件发布上线后，旧文件就没有用了。因判断此类文件数量不会太多，且清理会比较麻烦，因此垃圾文件的清理策略为：<strong>不清理</strong>。</p> <h2 id="jenkins-前端部署流程"><a href="#jenkins-前端部署流程" class="header-anchor">#</a> jenkins 前端部署流程</h2> <ol><li>签出代码;</li> <li>读取 git 变更记录，如果 frontend 目录有变更记录，比如存在 frontend/events/xxx 下的目录变更，则进入有变更的 events/xxx 目录，执行 npm build，如果为 preproduction 环境则为 npm build:pre;</li> <li>读取 jenkins.config.json 中的 publicPath 并上传到 s3 此路径中;</li></ol> <h2 id="对-production-preproduction-发布的-git-分支的规范调整"><a href="#对-production-preproduction-发布的-git-分支的规范调整" class="header-anchor">#</a> 对 production, preproduction 发布的 git 分支的规范调整</h2> <p>使用 jenkins 做上述流程的前端资源打包，则为了能够通过 git 记录对比出变更的具体目录，需要限制 production 和 preproductin 只允许发布指定的分支或者 tag（如果环境存在跨分支发布，则对比文件变更可能不准确）。</p></div></section> <footer class="footer">
   © 2021
@@ -129,6 +166,6 @@ web 路径有两种，一种为项目根目录，一种为项目 <code>public</c
   <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">VuePress</a>
   | Theme
   <a href="https://github.com/viko16/vuepress-theme-simple" rel="noopener" target="_blank">Simple</a></footer></div><div class="global-ui"></div></div>
-    <script src="/vuepress-blog/assets/js/app.fb0d49e7.js" defer></script><script src="/vuepress-blog/assets/js/3.d7b46cbf.js" defer></script><script src="/vuepress-blog/assets/js/16.0aa4aad9.js" defer></script>
+    <script src="/vuepress-blog/assets/js/app.01c6f053.js" defer></script><script src="/vuepress-blog/assets/js/4.fb1022f2.js" defer></script><script src="/vuepress-blog/assets/js/2.37cb18e6.js" defer></script>
   </body>
 </html>
