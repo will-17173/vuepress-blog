@@ -208,7 +208,7 @@ staticFile('events/2021/test-event/img/1.png', '', 0);
 
 #### 流程图
 
-![workflow](../.vuepress/public/img/workflow.png)
+![workflow](./.vuepress/public/img/workflow.png)
 
 #### 前端开发人员流程
 
@@ -300,7 +300,7 @@ staticFile('events/2021/test-event/img/1.png', '', 0);
 
 #### 流程图
 
-![workflow](../.vuepress/public/img/workflow2.png)
+![workflow](./.vuepress/public/img/workflow2.png)
 
 #### 前端开发人员流程
 
